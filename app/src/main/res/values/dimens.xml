@@ -2,4 +2,8 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <!-- HDialogBuilder-->
+    <dimen name="dialog_corner_radius">4dp</dimen>
+    <dimen name="dialog_msg_min_height">112dp</dimen>
+
 </resources>
