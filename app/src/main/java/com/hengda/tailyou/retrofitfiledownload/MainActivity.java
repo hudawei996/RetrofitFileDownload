@@ -21,8 +21,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        下载地址
-//        http://hengdawb-app.oss-cn-hangzhou.aliyuncs.com/app-debug.apk
+        //        下载地址
+        //        http://hengdawb-app.oss-cn-hangzhou.aliyuncs.com/app-debug.apk
         String baseUrl = "http://hengdawb-app.oss-cn-hangzhou.aliyuncs.com/";
         String fileName = "app-debug.apk";
         String fileStoreDir = Environment.getExternalStorageDirectory()
