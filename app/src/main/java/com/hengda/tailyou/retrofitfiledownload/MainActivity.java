@@ -8,7 +8,6 @@ import android.widget.TextView;
 
 import com.hengda.tailyou.retrofitfiledownload.fileload.FileApi;
 import com.hengda.tailyou.retrofitfiledownload.fileload.FileCallback;
-import com.orhanobut.logger.Logger;
 
 import java.io.File;
 
@@ -21,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Logger.init("FILE_LOAD");
 
 //        下载地址
 //        http://hengdawb-app.oss-cn-hangzhou.aliyuncs.com/app-debug.apk
