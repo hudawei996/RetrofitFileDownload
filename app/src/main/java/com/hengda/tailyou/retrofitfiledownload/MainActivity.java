@@ -24,14 +24,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //        下载地址
-        //        http://hengdawb-app.oss-cn-hangzhou.aliyuncs.com/app-debug.apk
         String baseUrl = "http://hengdawb-app.oss-cn-hangzhou.aliyuncs.com/";
         String fileName = "app-debug.apk";
-        String fileStoreDir = Environment.getExternalStorageDirectory().getAbsolutePath() + File.separator + "M_DEFAULT_DIR";
+        String fileStoreDir = Environment.getExternalStorageDirectory().getAbsolutePath() + File
+                .separator + "M_DEFAULT_DIR";
         String fileStoreName = fileName;
         showLoadingDialog();
-        FileApi.getInstance(baseUrl).loadFileByName(fileName, new FileCallback(fileStoreDir, fileStoreName) {
+        FileApi.getInstance(baseUrl)
+                .loadFileByName(fileName, new FileCallback(fileStoreDir, fileStoreName) {
                     @Override
                     public void onSuccess(File file) {
                         super.onSuccess(file);
@@ -78,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         hDialogBuilder.dismiss();
+                        FileApi.cancelLoading();
                     }
                 })
                 .show();

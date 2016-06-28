@@ -22,6 +22,7 @@ public class FileApi {
     private Retrofit retrofit;
     private FileService fileService;
     private volatile static FileApi instance;
+    private static Call<ResponseBody> call;
 
     private static Hashtable<String, FileApi> mFileApiTable;
 
@@ -68,8 +69,17 @@ public class FileApi {
      * @param callback
      */
     public void loadFileByName(String fileName, FileCallback callback) {
-        Call<ResponseBody> call = fileService.loadFile(fileName);
+        call = fileService.loadFile(fileName);
         call.enqueue(callback);
+    }
+
+    /**
+     * 取消下载
+     */
+    public static void cancelLoading() {
+        if (call != null && call.isCanceled() == false) {
+            call.cancel();
+        }
     }
 
     /**

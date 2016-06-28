@@ -47,7 +47,6 @@ public abstract class FileCallback implements Callback<ResponseBody> {
 
     public abstract void progress(long progress, long total);
 
-
     @Override
     public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
         try {
