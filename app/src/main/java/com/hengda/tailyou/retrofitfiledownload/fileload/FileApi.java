@@ -94,7 +94,8 @@ public class FileApi {
             @Override
             public Response intercept(Chain chain) throws IOException {
                 Response originalResponse = chain.proceed(chain.request());
-                return originalResponse.newBuilder()
+                return originalResponse
+                        .newBuilder()
                         .body(new FileResponseBody(originalResponse))
                         .build();
             }

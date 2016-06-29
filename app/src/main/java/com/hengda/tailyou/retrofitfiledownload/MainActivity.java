@@ -48,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
                         hDialogBuilder.dismiss();
                         call.cancel();
                     }
-
                 });
     }
 
